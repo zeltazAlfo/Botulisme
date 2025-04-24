@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background: linear-gradient(to bottom right, #045de9, #09c6f9);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  box-shadow: none;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form .row {
+  display: flex;
+  gap: 10px;
+}
+
+form .row input {
+  flex: 1;
+}
+
+form button {
+  background-color: #05c46b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+form button:hover {
+  background-color: #04b360;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+.request-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.request-option {
+  flex: 1 1 calc(50% - 10px);
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  color: #696969;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.request-option.selected {
+  background-color: #05c46b;
+  color: white;
+  border-color: #05c46b;
+}

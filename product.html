@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioDrug</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="css/font.css"/>
+  <link rel="stylesheet" href="css/nav_bar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo">
+      <img src="img/logoplus.jpeg" alt="BioDrug Logo" />
+      
+    </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="disease.html">Disease</a>
+      <a href="epidemiology.html">Epidemiology</a>
+      <a href="treatment.html">Treatment</a>
+      <a href="news.html">Articles & News</a>
+      <a class="active" href="product.html">Product</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <div class="main">
+    
+    <div id="who-box">
+    <div class="title">Who am I ?</div>
+    <div class="container">
+      <div class="image-card" id="patient">
+        <img src="img/1322.png" alt="Patient">
+        <div class="label">Patient</div>
+      </div>
+    
+    
+      <div class="image-card" id="physician">
+        <img src="img/132.png" alt="Doctor">
+        <div class="label" >Physician</div>
+      </div>
+    </div></div>
+    <div  id="physician-box" class="physician-box" style="display: none;">
+      <div class="subtitle">I’m physician</div>
+      <img src="img/product.jpeg" alt="produit"/>
+      <div class="description">Botulinum Antitoxin ABE. Patient leaflet 500 IU + 500 IU + 100 IU/ml, injection solution</div>
+      <div class="link-box"><a href="https://biomed.com.pl/assets/ulotki/Botulina_ABE_ulotka.pdf"> Download SPC </a></div>
+
+    </div>
+    <div  id="patient-box" class="patient-box" style="display: none;">
+      <p>Please visit your physician or emergency center</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("patient").addEventListener("click", function() {
+      const whoBox = document.querySelector("#who-box");
+
+      whoBox.style.opacity = "0.5"; // rend plus pâle
+      whoBox.style.filter = "blur(3px)";
+      whoBox.style.pointerEvents = "none"; 
+  document.getElementById("patient-box").style.display = "block";
+}); 
+
+document.getElementById("physician").addEventListener("click", function() {
+  document.querySelector("#who-box").style.display = "none";
+  document.getElementById("physician-box").style.display = "flex";
+});
+
+  </script>
+  <div id="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <div class="footer_title">Botulism Serum</div>
+            <p class="web_ref">© 2023 Botulism-serum.com</p>
+            <p>This website is operated by Medyser, and is intended for visitors from EU countries.</p>
+        </div>
+        
+        <a href="product.html">Our solutions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="contact.html">Contact</a>
+        
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.title{
+  color: #4997FD;
+  margin-block-end: 0.34em;
+  
+}
+.subtitle{
+    color: #5FD068;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.basic-text{
+    margin-top: 2%;
+    color: #3A3939;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 90%;
+    text-align: center;
+  }
+iframe {
+    width: 60% !important;
+    height: 150vh !important;
+    border: none !important;
+  }

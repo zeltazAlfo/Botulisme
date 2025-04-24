@@ -1,0 +1,32 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main .title{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2F88FB;
+    margin: 2%;
+  }
+
+.main .text-box{
+    text-align: left;
+    margin-left: 2%;
+}
+.main .text{
+    color: #3A3939;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.main .subtitle{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    color: #5FD068;
+    margin: 3% 0% 1% 0%;
+  }

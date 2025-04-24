@@ -1,0 +1,143 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; 
+}
+#who-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+.main .title{
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #2F88FB;
+    margin: 2%;
+    width: 80%;
+}
+
+.main .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    gap: 20%;
+    margin-bottom: 15%;
+}
+
+.image-card {
+    position: relative;
+    height:  250px;
+    border-radius: 8px;
+    overflow: visible; /* Important pour que le label dépasse */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background: white;
+  }
+  .image-card img {
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #00C851;
+  }
+
+  .image-card .label {
+    color: #3A3939;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #f0f0f0;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+#patient, #physician {
+transition: transform 0.3s ease; /* Ajoute une animation fluide */
+}
+
+#patient:hover, #physician:hover {
+transform: scale(1.2); /* Agrandit à 110% */
+}
+
+.physician-box {
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 5%;
+    width: 80%;
+    border-radius: 10px;
+    background: linear-gradient( to bottom,#266EC9, #2F88FB);
+}
+
+.physician-box .subtitle{
+    display: inline-block;
+    font-size: x-large;
+    font-weight: 600;
+    color:  white;
+    margin: 2%;
+    width: 80%;
+}
+.physician-box img {
+    width: 20%;
+    border-radius: 7px;
+
+}
+
+.physician-box .description{
+    display: inline-block;
+    font-size: large;
+    font-weight: 600;
+    color:  white;
+    margin: 2%;
+    width: 80%;
+}
+
+.physician-box .link-box {
+    
+    width: fit-content;
+    padding: 2%;
+    border-radius: 25px;
+    background-color: #03A14D;
+    margin-bottom: 3%;
+    text-align: center;
+
+}
+
+.physician-box a {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    font-weight: 400;
+    color:  white;
+    font-size: medium;
+}
+
+.patient-box {
+    text-align: center;
+    align-items: center;
+    padding: 5% 2% 5% 2%;
+    width: 40%;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #266EC9, #2F88FB);
+  
+    
+  position: absolute; /* Change de relative à absolute */
+  z-index: 999; /* Bien au-dessus */
+  top: 100px; /* Ajuste selon ce que tu veux */
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  
+.patient-box p{
+    font-weight: 400;
+    color:  white;
+    font-size: large;
+}

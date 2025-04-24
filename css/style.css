@@ -1,0 +1,304 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.container{
+  text-align: center;
+  align-items: center;
+  margin-top: 5%;
+  
+  
+}
+
+
+.title {
+  display: inline-block;
+  font-size: xx-large;
+  font-weight: 700;
+  color: #2F88FB;
+  border-bottom: 1px solid #2F88FB;
+  padding-bottom: 6px; /* espace entre le texte et la ligne */
+  margin-bottom: 2%;
+}
+
+.main .first-child {
+  display: flex;
+  background-image: url("../img/background1.png");
+  background-size: cover; /* L'image couvre tout l'élément */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; 
+  flex-direction: row;
+  gap: 30px;
+  padding: 7%;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 80%;
+  border-radius: 10px;
+  
+}
+
+.main .first-child div {
+  border-radius: 10px;
+  max-width: 40%;
+  color: white;
+  background-color: #2F88FB;
+  font-size: x-large;
+  font-weight: 700;
+  text-align: center;
+  padding: 2%;
+}
+
+#biodrug {
+  width: 300px;
+  height: 100px;
+}
+
+#biomed{
+  width: 220px;
+  height: 145px;
+}
+
+#target{
+  width: 30%;
+  height: 20%px;
+  border-radius: 7px;
+  border: 1px solid #2F88FB;
+}
+
+.second-child{
+  width: 90%;
+}
+
+.second-child .subcontainer {
+  display: flex;
+  flex-direction: row;
+  gap:2%;
+
+}
+
+.second-child .text{
+
+  text-align: left;
+  font-size: 14px;
+  font-weight: 300;
+  color: #3A3939;
+  
+}
+.third-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.third-child .subcontainer {
+  
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Espace entre les cadres */
+  width: 90%;
+}
+
+.third-child .subcontainer .cadre {
+  width: 90%; /* Vous pouvez ajuster cette valeur si nécessaire */
+  background: linear-gradient(to bottom right, #5FD068, #03A14D);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 5%; /* Espace entre l'image et le texte */
+  padding: 10px; /* Ajoute un padding à l'intérieur du cadre */
+}
+
+.third-child .subcontainer img {
+  width: 120px; /* Ajustez la largeur selon vos besoins */
+  height: 80%; /* Définir une hauteur fixe pour éviter l'allongement */
+  object-fit: cover; /* Maintient le ratio d'aspect sans déformation */
+  padding: 10px; /* Ajoute un padding autour de l'image */
+  border-radius: 10px; /* Arrondit les coins de l'image si nécessaire */
+  
+}
+.third-child .subcontainer .cadre .text{
+  text-align: left;
+  color: white;
+}
+
+.third-child .subcontainer .cadre .subtitle{
+  font-weight: 600;
+}
+
+
+.third-child .subcontainer .cadre .place{
+  margin-top: 1%;
+  margin-bottom: 2%;
+  font-style: italic;
+  font-size: small;
+}
+.third-child .subcontainer .cadre .view{
+  font-weight: 300;
+  font-size: 13px;
+
+}
+
+.fourth-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+
+
+.subcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  grid-template-rows: repeat(3,auto); /* Trois lignes */
+  gap: 10px;
+  column-gap: 15%;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.cell {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box img {
+  width: 100px;
+  height: auto;
+}
+.subcontainer .biodrug.img-box img {
+  width: 150px; /* ou une taille plus grande selon ton besoin */
+  height: auto;
+}
+
+
+
+.part1 {
+  background: linear-gradient(to bottom right, #2F88FB, #034599);
+  color: white;
+  padding: 20px;
+  border-radius: 20px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.part2 {
+  background: linear-gradient(to bottom right, #2F88FB, #034599);
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.part2 .part-title {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.part2 ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.part2 li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.fith-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+
+}
+
+.fith-child .subtitle{
+  color: #5FD068;
+  font-size: x-large;
+  font-weight: 700;
+}
+.fith-child .basic-text{
+  margin-top: 2%;
+  color: #3A3939;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 90%;
+  text-align: center;
+}
+
+.six-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centre les enfants horizontalement */
+  justify-content: center;
+  width: 80%;
+  margin-right: auto; 
+  margin-left: auto;       /* centre le bloc dans la page */
+  text-align: center;
+}
+
+.six-child .title {
+  margin-bottom: 30px;  /* un peu d’espace sous le titre */
+}
+
+.six-child .subcontainer {
+  display: flex;
+  justify-content: center; /* centre les images dans le conteneur */
+  align-items: center;
+  gap: 10%; /* espace entre les images */
+  flex-wrap: wrap; /* permet d’être responsive si besoin */
+}
+
+.six-child img {
+  border-radius: 10px;
+  border: 1px solid #5FD068;
+  width: 300px;
+  height: auto;
+}
+
+.seven-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centre les enfants horizontalement */
+  justify-content: center;
+  width: 80%;
+  margin-right: auto; 
+  margin-left: auto;       /* centre le bloc dans la page */
+  text-align: center;
+}
+.seven-child .subtitle{
+  color: #5FD068;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.seven-child .basic-text{
+  margin-top: 2%;
+  color: #3A3939;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 90%;
+  text-align: center;
+}
+.seven-child iframe {
+  width: 70% !important;
+  height: 140vh !important;
+  border: none !important;
+}
+

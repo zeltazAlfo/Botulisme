@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #2F88FB;
+    margin: 2%;
+  }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-child{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-child .subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+  
+  }
+
+.first-child img{
+    width: 35%;
+    height: 30%;
+    border-radius: 7px;
+    border: 1px solid #2F88FB;
+  }
+.first-child .text{
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+    
+  }
+
+.first-child .text p {
+    margin-block-start: 0em;
+  }
+
+
+
+  .second-child{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-child img{
+    width: 35%;
+    height: 30%;
+    
+    
+  }
+
+.second-child .text{
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+    
+  }
+
+.second-child .subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+  
+  }
+
+.second-child .fourth-child{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-child strong {
+    color: #5FD068;
+}
+
+.second-child a {
+    text-decoration: none;
+    color: #5FD068;
+}  
+
+.third-child{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third-child img{
+    width: 30%;
+
+    border-radius: 10px;
+    border: 1px solid #4997FD;
+  }
+.third-child .text p {
+    margin-block-start: 0em;
+  }
+.third-child .text{
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+    
+  }
+
+.third-child .subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+  
+  }
+
+
+.third-child .nb {
+    color: #5FD068;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.third-child a {
+    text-decoration: none;
+    color: #5FD068;
+}
+
+.fourth-child{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fourth-child .subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+  
+  }
+
+.fourth-child img{
+    width: 35%;
+    height: 30%;
+    border-radius: 7px;
+    border: 1px solid #2F88FB;
+  }
+.fourth-child .text{
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+    
+  }
+
+.fourth-child .text p {
+    margin-block-start: 0em;
+  }
+
+  .fourth-child a {
+    text-decoration: none;
+    color: #5FD068;
+}
