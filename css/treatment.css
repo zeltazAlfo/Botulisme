@@ -1,56 +1,108 @@
-.main{
+/* Global Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Empêche les bordures et marges de déborder */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+/* Main container */
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
-.first-child .title{
-display: inline-block;
-font-size: xx-large;
-font-weight: 700;
-color: #2F88FB;
-margin: 2%;
-width: 80;}
 
-.first-child{
+/* First child */
+.first-child {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%; /* Empêche le débordement */
 }
 
+/* Title */
+.first-child .title {
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #2F88FB;
+    margin: 2%;
+    width: 100%; /* Utilise toute la largeur disponible */
+    word-wrap: break-word; /* Evite le débordement du texte */
+    overflow-wrap: break-word;
+    text-align: center; /* Centre le titre */
+}
+
+/* Subcontainer (flex pour les images et texte) */
 .first-child .subcontainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:2%;
-    
-    }
+    gap: 2%;
+    width: 100%; /* Evite le débordement */
+    justify-content: center;
+}
 
-.first-child img{
-    max-width: 50%;
+/* Image */
+.first-child img {
+    max-width: 50%; /* Limite la largeur des images à 50% du conteneur */
     height: auto;
-    
-    }
-.first-child .text{
+    border-radius: 7px;
+    border: 1px solid #2F88FB;
+}
+
+/* Texte (boîte avec fond en dégradé) */
+.first-child .text {
     color: white;
     text-align: left;
     font-size: medium;
     font-weight: 300;
-    background: linear-gradient(to left,#5FD068, #03A14D);;
+    background: linear-gradient(to left, #5FD068, #03A14D);
     border-radius: 10px;
     padding: 2%;
-    max-width: 48%;;
+    max-width: 48%; /* Limite la largeur du texte */
     height: fit-content;
+    word-wrap: break-word; /* Empêche le débordement du texte */
 }
 
+/* Espacement des paragraphes */
 .first-child .text p {
     margin-block-start: 0em;
-    }
+}
 
+/* Liens */
 .first-child a {
     text-decoration: none;
     font-weight: 300;
     color: white;
     font-size: small;
     border-bottom: 1px solid white;
+    word-wrap: break-word; /* Empêche le débordement des liens */
+    overflow-wrap: break-word;
+}
+
+/* Media Query (pour petits écrans) */
+@media screen and (max-width: 1200px) {
+    .first-child .subcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .first-child img {
+        max-width: 90%; /* Ajuste les images sur les petits écrans */
+    }
+
+    .first-child .text {
+        max-width: 90%; /* Augmente la largeur du texte sur les petits écrans */
+    }
 }

@@ -36,6 +36,15 @@
       <span></span>
     </div>
   </header>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <div class="main">
     <div class="container first-child"> 
       <h2 class="title">What to do if a diagnosis of the botulism occurs ?</h2>

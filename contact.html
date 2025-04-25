@@ -35,11 +35,21 @@
       <span></span>
     </div>
   </header>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <div class="main">
   <h1 class="title">Contact</h1>
   <div class="subtitle"> Contact Form</div>
   <p class="basic-text">If you have any questions about our solutions, want to learn more about our products, or are interested in establishing a partnership, feel free to contact us using the form below. Our team will get back to you as soon as possible.</p>
     
+  </div>
+  <div class="frame-box">
   <iframe src="iframe/contact_form.html" style="border: none; width: 100vw; height: 110vw;"></iframe>
 </div>
   <div id="footer">

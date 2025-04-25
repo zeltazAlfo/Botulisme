@@ -36,6 +36,14 @@
       <span></span>
     </div>
   </header>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <div class="main">
     <div class="title">Terms and Conditions</div>
     <div class="subtitle">PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY BEFORE USING THIS WEBSITE</div>

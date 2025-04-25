@@ -27,6 +27,9 @@
   }
   
   .nav-links {
+    position: relative; /* ou 'fixed' si tu veux qu'elle reste visible en scrollant */
+    z-index: 9999;
+
     display: flex;
     font-size: 20px;
     gap: 30px;
@@ -60,3 +63,39 @@
     border-radius: 2px;
   }
   
+/* Cacher le menu burger sur les grands écrans */
+.burger {
+  display: none;
+}
+
+/* Menu déroulant caché par défaut */
+.nav-links {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+  margin-right: 5%;
+  
+}
+
+@media (max-width: 940px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px; /* ajuster selon la taille de ta navbar */
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}

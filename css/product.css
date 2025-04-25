@@ -1,52 +1,82 @@
-.main{
+/* Global Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+/* Main container */
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative; 
+    position: relative;
+    width: 100%; /* Garantit que le conteneur occupe toute la largeur */
 }
-#who-box{
+
+/* Who box */
+#who-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 80%;
 }
-.main .title{
+
+/* Title */
+.main .title {
     display: inline-block;
     font-size: xx-large;
     font-weight: 700;
     color: #2F88FB;
     margin: 2%;
-    width: 80%;
+    width: 100%; /* Maximiser la largeur pour éviter le débordement */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.main .container{
+/* Container for the content (image cards, physician box) */
+.main .container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    width: 80%;
-    gap: 20%;
+    width: 100%; /* Empêche le débordement horizontal */
+    gap: 20px;
     margin-bottom: 15%;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur les petits écrans */
 }
 
+/* Image card */
 .image-card {
     position: relative;
-    height:  250px;
+    height: 250px;
+    width: 45%; /* Ajuste la largeur pour que les éléments tiennent sur l'écran */
     border-radius: 8px;
-    overflow: visible; /* Important pour que le label dépasse */
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    overflow: visible;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     background: white;
-  }
-  .image-card img {
+    margin: 10px;
+}
+
+/* Image inside the card */
+.image-card img {
     height: 100%;
+    width: 100%; /* Assure que l'image prend toute la largeur de son conteneur */
     display: block;
     border-radius: 8px;
     border: 1px solid #00C851;
-  }
+}
 
-  .image-card .label {
+/* Label inside the image card */
+.image-card .label {
     color: #3A3939;
     position: absolute;
     bottom: 0;
@@ -56,17 +86,19 @@
     padding: 5px 15px;
     border-radius: 10px;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Hover effect for patient and physician */
 #patient, #physician {
-transition: transform 0.3s ease; /* Ajoute une animation fluide */
+    transition: transform 0.3s ease;
 }
 
 #patient:hover, #physician:hover {
-transform: scale(1.2); /* Agrandit à 110% */
+    transform: scale(1.2);
 }
 
+/* Physician box */
 .physician-box {
     display: grid;
     flex-direction: column;
@@ -75,69 +107,93 @@ transform: scale(1.2); /* Agrandit à 110% */
     margin: 5%;
     width: 80%;
     border-radius: 10px;
-    background: linear-gradient( to bottom,#266EC9, #2F88FB);
+    background: linear-gradient(to bottom, #266EC9, #2F88FB);
 }
 
-.physician-box .subtitle{
+/* Subtitle inside the physician box */
+.physician-box .subtitle {
     display: inline-block;
     font-size: x-large;
     font-weight: 600;
-    color:  white;
+    color: white;
     margin: 2%;
-    width: 80%;
+    width: 100%;
 }
+
+/* Image inside the physician box */
 .physician-box img {
     width: 20%;
     border-radius: 7px;
-
 }
 
-.physician-box .description{
+/* Description inside the physician box */
+.physician-box .description {
     display: inline-block;
     font-size: large;
     font-weight: 600;
-    color:  white;
+    color: white;
     margin: 2%;
-    width: 80%;
+    width: 100%;
 }
 
+/* Link box inside the physician box */
 .physician-box .link-box {
-    
     width: fit-content;
     padding: 2%;
     border-radius: 25px;
     background-color: #03A14D;
     margin-bottom: 3%;
     text-align: center;
-
 }
 
+/* Links inside the physician box */
 .physician-box a {
     text-decoration: none;
     border-bottom: 1px solid white;
     font-weight: 400;
-    color:  white;
+    color: white;
     font-size: medium;
 }
 
+/* Patient box */
 .patient-box {
     text-align: center;
     align-items: center;
-    padding: 5% 2% 5% 2%;
-    width: 40%;
+    padding: 5% 2%;
+    width: 80%; /* Réduit la largeur pour mieux s'adapter */
     border-radius: 10px;
     background: linear-gradient(to bottom, #266EC9, #2F88FB);
-  
-    
-  position: absolute; /* Change de relative à absolute */
-  z-index: 999; /* Bien au-dessus */
-  top: 100px; /* Ajuste selon ce que tu veux */
-  left: 50%;
-  transform: translateX(-50%);
-  }
-  
-.patient-box p{
+    position: absolute;
+    z-index: 999;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Text inside the patient box */
+.patient-box p {
     font-weight: 400;
-    color:  white;
+    color: white;
     font-size: large;
+}
+
+/* Media Queries for responsive design */
+@media screen and (max-width: 1200px) {
+    .main .container {
+        flex-direction: column; /* Empile les éléments sur petits écrans */
+        gap: 10%;
+    }
+
+    .image-card {
+        width: 80%; /* Les cartes occupent plus de place sur petits écrans */
+    }
+
+    .physician-box, .patient-box {
+        width: 90%; /* Augmente la largeur des boîtes sur petits écrans */
+    }
+
+    .main .title {
+        font-size: large; /* Réduit la taille du titre sur petits écrans */
+        width: 100%; /* Prend toute la largeur sur petits écrans */
+    }
 }

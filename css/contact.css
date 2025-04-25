@@ -8,6 +8,7 @@ body{
     flex-direction: column;
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
+
 }
 
 .title{
@@ -29,8 +30,40 @@ body{
     max-width: 90%;
     text-align: center;
   }
+.frame-box{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
 iframe {
     width: 60% !important;
-    height: 150vh !important;
+    height: 100vh !important;
     border: none !important;
+  }
+
+  @media screen and (max-width: 1400px) {
+    iframe {
+      width: 75% !important;
+      height: 100vh !important;
+      border: none !important;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    iframe {
+      width: 85% !important;
+      height: 100vh !important;
+      border: none !important;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    iframe {
+      width: 98% !important;
+      height: 100vh !important;
+      border: none !important;
+    }
   }

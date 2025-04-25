@@ -36,7 +36,14 @@
       <span></span>
     </div>
   </header>
-
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <div class="main">
   <div class="first-child">
     <div class="title">In 2022, 84 confirmed cases of botulism were reported in the EU/EEA; main commune serotypes A,B,E</div>

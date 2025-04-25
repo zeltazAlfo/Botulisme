@@ -34,6 +34,14 @@
       <span></span>
     </div>
   </header>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <div class = "main">
     <div class="container first-child">
         <img id="biomed" src="img/biomed.png" alt="Biomed Logo"/>

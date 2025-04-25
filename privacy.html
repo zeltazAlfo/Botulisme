@@ -14,12 +14,9 @@
 <body>
   <header class="navbar">
     <div class="logo">
-      <div class="logo">
       <img src="img/logoplus.jpeg" alt="BioDrug Logo" />
-      
     </div>
-    </div>
-
+  
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="disease.html">Disease</a>
@@ -29,13 +26,22 @@
       <a href="product.html">Product</a>
       <a href="contact.html">Contact</a>
     </nav>
-
+  
     <div class="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </header>
+    <script>
+      const burger = document.querySelector('.burger');
+      const navLinks = document.querySelector('.nav-links');
+    
+      burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+  
 
   <div class="main">
     <div class="title">Privacy policy</div>
