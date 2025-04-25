@@ -133,6 +133,7 @@ body {
     height: auto;
     border-radius: 10px;
     border: 1px solid #4997FD;
+    margin-top: 3%;
 }
 
 .third-child .text p {
@@ -185,6 +186,8 @@ body {
     height: auto;
     border-radius: 7px;
     border: 1px solid #2F88FB;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .fourth-child .text {
@@ -206,6 +209,11 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+
+  .third-child img{
+    display: none;
+  }
+
     .first-child .subcontainer,
     .second-child .subcontainer,
     .third-child .subcontainer,

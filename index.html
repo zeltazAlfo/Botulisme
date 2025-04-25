@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/font.css"/>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/nav_bar.css" />
+  <link rel="stylesheet" href="css/contact_form.css" />
   <link rel="stylesheet" href="css/footer.css" />
   
 </head>
@@ -164,10 +165,48 @@
   <div class="subtitle"> Contact Form</div>
   <p class="basic-text">If you have any questions about our solutions, want to learn more about our products, or are interested in establishing a partnership, feel free to contact us using the form below. Our team will get back to you as soon as possible.</p>
 
-  <iframe src="iframe/contact_form.html" style="border: none; width: 100vw; height: 110vw;"></iframe>
- 
+  <form>
+    <label for="name">First Name & Last Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse" required />
+
+    <div class="row">
+      <input type="text" name="city" placeholder="City" />
+      <input type="text" name="codepost" placeholder="Code post" />
+      <input type="text" name="country" placeholder="Country" />
+    </div>
+
+    <label>Request</label>
+    <div class="request-options">
+      <div class="request-option" onclick="selectRequest(this, 'Medical information')">Medical information</div>
+      <div class="request-option" onclick="selectRequest(this, 'Sales & Marketing information')">Sales & Marketing information</div>
+      <div class="request-option" onclick="selectRequest(this, 'Pharmacovigilance')">Pharmacovigilance</div>
+      <div class="request-option" onclick="selectRequest(this, 'Others')">Others</div>
+    </div>
+    <input type="hidden" name="request" id="request" />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Submit My Request</button>
+  </form>
   </div>
 </div>
+<script>
+  function selectRequest(element, value) {
+    document.querySelectorAll('.request-option').forEach(option => option.classList.remove('selected'));
+    element.classList.add('selected');
+    document.getElementById('request').value = value;
+  }
+</script>
   <div id="footer">
     <div class="footer-content">
         <div class="footer-logo">

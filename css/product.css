@@ -58,7 +58,7 @@ body {
 .image-card {
     position: relative;
     height: 250px;
-    width: 45%; /* Ajuste la largeur pour que les éléments tiennent sur l'écran */
+    width: fit-content; /* Ajuste la largeur pour que les éléments tiennent sur l'écran */
     border-radius: 8px;
     overflow: visible;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@ body {
 /* Image inside the card */
 .image-card img {
     height: 100%;
-    width: 100%; /* Assure que l'image prend toute la largeur de son conteneur */
+     /* Assure que l'image prend toute la largeur de son conteneur */
     display: block;
     border-radius: 8px;
     border: 1px solid #00C851;
@@ -178,14 +178,14 @@ body {
 }
 
 /* Media Queries for responsive design */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
     .main .container {
         flex-direction: column; /* Empile les éléments sur petits écrans */
         gap: 10%;
     }
 
     .image-card {
-        width: 80%; /* Les cartes occupent plus de place sur petits écrans */
+        width: fit-content; /* Les cartes occupent plus de place sur petits écrans */
     }
 
     .physician-box, .patient-box {

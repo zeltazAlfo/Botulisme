@@ -277,7 +277,7 @@
   flex-direction: column;
   align-items: center;  /* centre les enfants horizontalement */
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin-right: auto; 
   margin-left: auto;       /* centre le bloc dans la page */
   text-align: center;
@@ -296,15 +296,14 @@
   max-width: 90%;
   text-align: center;
 }
-.seven-child iframe {
-  width: 60% !important; /* Assure que l'iframe prend toute la largeur disponible */
-  height: 100vh !important; /* Utilise 100% de la hauteur de la vue (viewport) */
-  border: none !important; /* Retire la bordure */
+.second-child form{
+  width: 50%;
 }
+
 
 /* -------------------- RESPONSIVE DESIGN -------------------- */
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .main .first-child {
     flex-direction: column;
     padding: 5%;
@@ -376,23 +375,19 @@
     width: 90%;
   }
 
-  .seven-child{
-    width: 80%;
-    height: 100%;
+  
+  .second-child form{
+    width: 50%;
   }
-  .seven-child iframe {
-    width: 60% !important; /* Toujours 100% de la largeur */
-    height: 100vh !important; /* Ajuste la hauteur à 90vh sur des écrans plus petits */
-  }
+  
 }
 
 @media screen and (max-width: 768px) {
+
   .title {
     font-size: x-large;
   }
-  .seven-child{
-    width: 98%;
-  }
+  
   .subtitle {
     font-size: large;
   }
@@ -403,23 +398,9 @@
   #target{
     width: 100%;
   }
-  .footer_title {
-    font-size: medium;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .footer-content a {
-    display: block;
-    margin: 5px 0;
-  }
-
-  .footer-logo {
-    max-width: 100%;
+  
+  .second-child ul{
+    margin-left: 5%;
   }
 
   .third-child .subcontainer .cadre img {
@@ -430,10 +411,7 @@
   .part1, .part2 {
     font-size: 13px;
   }
-  .seven-child iframe {
-    width: 100% !important;
-    height: 100vh !important;
-  }
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -483,8 +461,5 @@
   .footer-logo .web_ref {
     font-size: 12px;
   }
-  .seven-child iframe {
-    width: 100% !important;
-    height: 100vh !important;
-  }
+  
 }
