@@ -73,40 +73,56 @@
   </div>
 
   <script>
-    var opened = false;
-    document.getElementById("patient").addEventListener("click", function() {
-      const whoBox = document.querySelector("#who-box");
-      console.log(opened);
-      whoBox.style.opacity = "0.5"; // rend plus pâle
+    
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  
+    let opened = false;
+  
+    const patientCard = document.getElementById("patient");
+    const physicianCard = document.getElementById("physician");
+    const whoBox = document.querySelector("#who-box");
+    const patientBox = document.getElementById("patient-box");
+    const physicianBox = document.getElementById("physician-box");
+  
+    patientCard.addEventListener("click", function (e) {
+      e.stopPropagation(); // empêche le clic de remonter jusqu'au body
+      whoBox.style.opacity = "0.5";
       whoBox.style.filter = "blur(3px)";
-      whoBox.style.pointerEvents = "none"; 
-  document.getElementById("patient-box").style.display = "block";
-  opened = true;
-}); 
-
-document.getElementById("physician").addEventListener("click", function() {
-  document.querySelector("#who-box").style.display = "none";
-  document.getElementById("physician-box").style.display = "flex";
-  opened = true;
-});
-
-document.body.addEventListener("click",function() {
-  console.log(opened);
-  if(opened){
-  const whoBox = document.querySelector("#who-box");
-  whoBox.style.display = "flex";
-  whoBox.style.opacity = "1"; // rend plus pâle
-  whoBox.style.filter = "blur(0px)";
-  whoBox.style.pointerEvents = "all"; 
-  document.getElementById("physician-box").style.display = "none";
-  document.getElementById("patient-box").style.display = "none";
-  opened = false;
-}
-
-});
-
-
+      whoBox.style.pointerEvents = "none";
+      patientBox.style.display = "block";
+      physicianBox.style.display = "none";
+      opened = true;
+    });
+  
+    physicianCard.addEventListener("click", function (e) {
+      e.stopPropagation();
+      whoBox.style.display = "none";
+      physicianBox.style.display = "flex";
+      patientBox.style.display = "none";
+      opened = true;
+    });
+  
+    document.body.addEventListener("click", function (e) {
+      if (opened) {
+        // Ignore clicks inside the open boxes
+        if (e.target.closest("#patient-box") || e.target.closest("#physician-box") || e.target.closest(".image-card")) {
+          return; // Ne fait rien si on clique dans une boîte ou une image-card
+        }
+        
+        whoBox.style.display = "flex";
+        whoBox.style.opacity = "1";
+        whoBox.style.filter = "blur(0px)";
+        whoBox.style.pointerEvents = "all";
+        patientBox.style.display = "none";
+        physicianBox.style.display = "none";
+        opened = false;
+      }
+    });
   </script>
+  
   <div id="footer">
     <div class="footer-content">
         <div class="footer-logo">
