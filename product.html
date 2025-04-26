@@ -73,19 +73,38 @@
   </div>
 
   <script>
+    var opened = false;
     document.getElementById("patient").addEventListener("click", function() {
       const whoBox = document.querySelector("#who-box");
-
+      console.log(opened);
       whoBox.style.opacity = "0.5"; // rend plus pâle
       whoBox.style.filter = "blur(3px)";
       whoBox.style.pointerEvents = "none"; 
   document.getElementById("patient-box").style.display = "block";
+  opened = true;
 }); 
 
 document.getElementById("physician").addEventListener("click", function() {
   document.querySelector("#who-box").style.display = "none";
   document.getElementById("physician-box").style.display = "flex";
+  opened = true;
 });
+
+document.body.addEventListener("click",function() {
+  console.log(opened);
+  if(opened){
+  const whoBox = document.querySelector("#who-box");
+  whoBox.style.display = "flex";
+  whoBox.style.opacity = "1"; // rend plus pâle
+  whoBox.style.filter = "blur(0px)";
+  whoBox.style.pointerEvents = "all"; 
+  document.getElementById("physician-box").style.display = "none";
+  document.getElementById("patient-box").style.display = "none";
+  opened = false;
+}
+
+});
+
 
   </script>
   <div id="footer">

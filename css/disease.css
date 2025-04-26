@@ -54,7 +54,6 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2%;
-    flex-wrap: wrap; /* Permet à l'image et au texte de se réorganiser sur mobile */
     justify-content: center; /* Centre le contenu */
     width: 100%; /* Assure que tout reste contenu */
 }
@@ -101,7 +100,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2%;
-    flex-wrap: wrap;
+    
 }
 
 .second-child .fourth-child {
@@ -152,7 +151,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2%;
-    flex-wrap: wrap;
+    
 }
 
 .third-child .nb {
@@ -178,7 +177,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2%;
-    flex-wrap: wrap;
+    
 }
 
 .fourth-child img {
@@ -207,9 +206,14 @@ body {
     color: #5FD068;
 }
 
+
+
 /* Responsive design */
 @media (max-width: 768px) {
 
+  .subcontainer{
+    flex-wrap: wrap;
+    }
   .third-child img{
     display: none;
   }
