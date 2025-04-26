@@ -36,14 +36,7 @@
       <span></span>
     </div>
   </header>
-  <script>
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-  
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+
   <div class="main">
     
     <div id="who-box">
@@ -73,54 +66,61 @@
   </div>
 
   <script>
-    
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
   
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  
-    let opened = false;
-  
-    const patientCard = document.getElementById("patient");
-    const physicianCard = document.getElementById("physician");
-    const whoBox = document.querySelector("#who-box");
-    const patientBox = document.getElementById("patient-box");
-    const physicianBox = document.getElementById("physician-box");
-  
-    patientCard.addEventListener("click", function (e) {
-      e.stopPropagation(); // empêche le clic de remonter jusqu'au body
-      whoBox.style.opacity = "0.5";
-      whoBox.style.filter = "blur(3px)";
-      whoBox.style.pointerEvents = "none";
-      patientBox.style.display = "block";
-      physicianBox.style.display = "none";
-      opened = true;
-    });
-  
-    physicianCard.addEventListener("click", function (e) {
-      e.stopPropagation();
-      whoBox.style.display = "none";
-      physicianBox.style.display = "flex";
-      patientBox.style.display = "none";
-      opened = true;
-    });
-  
-    document.body.addEventListener("click", function (e) {
-      if (opened) {
-        // Ignore clicks inside the open boxes
-        if (e.target.closest("#patient-box") || e.target.closest("#physician-box") || e.target.closest(".image-card")) {
-          return; // Ne fait rien si on clique dans une boîte ou une image-card
-        }
-        
-        whoBox.style.display = "flex";
-        whoBox.style.opacity = "1";
-        whoBox.style.filter = "blur(0px)";
-        whoBox.style.pointerEvents = "all";
-        patientBox.style.display = "none";
-        physicianBox.style.display = "none";
-        opened = false;
+    burger.addEventListener('click', (e) => {
+    e.stopPropagation(); // IMPORTANT : évite que le clic sur burger soit capté par le body
+    navLinks.classList.toggle('active');
+  });
+
+  let opened = false;
+
+  const patientCard = document.getElementById("patient");
+  const physicianCard = document.getElementById("physician");
+  const whoBox = document.querySelector("#who-box");
+  const patientBox = document.getElementById("patient-box");
+  const physicianBox = document.getElementById("physician-box");
+
+  patientCard.addEventListener("click", function (e) {
+    e.stopPropagation();
+    whoBox.style.opacity = "0.5";
+    whoBox.style.filter = "blur(3px)";
+    whoBox.style.pointerEvents = "none";
+    patientBox.style.display = "block";
+    physicianBox.style.display = "none";
+    opened = true;
+  });
+
+  physicianCard.addEventListener("click", function (e) {
+    e.stopPropagation();
+    whoBox.style.display = "none";
+    physicianBox.style.display = "flex";
+    patientBox.style.display = "none";
+    opened = true;
+  });
+
+  document.body.addEventListener("click", function (e) {
+    if (opened) {
+      if (
+        e.target.closest("#patient-box") || 
+        e.target.closest("#physician-box") || 
+        e.target.closest(".image-card") || 
+        e.target.closest(".burger") || 
+        e.target.closest(".nav-links")
+      ) {
+        return; // ignore clicks on patient box, physician box, images, burger or menu
       }
-    });
+
+      whoBox.style.display = "flex";
+      whoBox.style.opacity = "1";
+      whoBox.style.filter = "blur(0px)";
+      whoBox.style.pointerEvents = "all";
+      patientBox.style.display = "none";
+      physicianBox.style.display = "none";
+      opened = false;
+    }
+  });
   </script>
   
   <div id="footer">

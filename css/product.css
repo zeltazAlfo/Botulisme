@@ -190,6 +190,8 @@ body {
 
     .physician-box, .patient-box {
         width: 90%; /* Augmente la largeur des boîtes sur petits écrans */
+        margin-top: 25%;
+        margin-bottom: 25%;
     }
 
     .main .title {
