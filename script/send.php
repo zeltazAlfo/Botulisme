@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Destinataire
-    $to = "ton_email@domaine.com"; // <-- Mets ton email ici
+    $to = "swyzombrella@gmail.com"; // <-- Mets ton email ici
 
     // Sujet du mail
     $subject = "New Contact Request from Website";

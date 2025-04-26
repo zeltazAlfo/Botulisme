@@ -154,7 +154,7 @@
 
 
 
-.subcontainer {
+.fourth-child .subcontainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
   grid-template-rows: repeat(3,auto); /* Trois lignes */
@@ -162,7 +162,9 @@
   column-gap: 15%;
   width: 100%;
   max-width: 1200px;
+  font-weight: 300;
 }
+
 
 .cell {
   padding: 20px;
