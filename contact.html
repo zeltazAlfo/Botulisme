@@ -51,7 +51,7 @@
     
   </div>
   <div class="frame-box">
-    <form>
+    <form action="send_mail.php" method="POST">
       <label for="name">First Name & Last Name</label>
       <input type="text" id="name" name="name" required />
   
@@ -85,6 +85,7 @@
       <button type="submit">Submit My Request</button>
     </form>
   </div>
+  
   <script>
     function selectRequest(element, value) {
       document.querySelectorAll('.request-option').forEach(option => option.classList.remove('selected'));
