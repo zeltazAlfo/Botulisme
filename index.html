@@ -78,7 +78,7 @@
                     <div class="subtitle">Prof. Vladimir Olear, Ph.D</div>
                     <div class="place">Scientifc Officer & Founder BioDrug Ltd</div>
                     <div class="view">“With 35 years experience in the field
-                        of infectious diseases, I am truly honored to support the European Botuslism serum
+                        of infectious diseases, I am truly honored to support the European Botulism serum
                         Manufacturer, bringing together leading experts in the fight against botulism, and I am confident that our combined efforts will make a significant impact in advancing prevention and treatment."</div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 <div class="text">
                     <div class="subtitle">Izabela Serafinska, Ph.D</div>
                     <div class="place">Head of R&D Biomed Warsaw</div>
-                    <div class="view"></div>
+                    <div class="view">“I am a biotechnologist, with over five years of experience in the pharmaceutical industry. Currently, I have the privilege of leading Research and Development efforts, where science meets purpose. It is a profound honor to be recognized as an expert in the field of botulism — a subject of immense importance to both human and animal health. I am deeply committed to advancing knowledge in this area and to contributing to the global effort of protecting lives. Working alongside world-renowned experts is both an inspiration and a responsibility that I carry with pride and dedication"</div>
                 </div>
             </div>
         </div>
@@ -184,15 +184,6 @@
       <input type="text" name="country" placeholder="Country" />
     </div>
 
-    <label>Request</label>
-    <div class="request-options">
-      <div class="request-option" onclick="selectRequest(this, 'Medical information')">Medical information</div>
-      <div class="request-option" onclick="selectRequest(this, 'Sales & Marketing information')">Sales & Marketing information</div>
-      <div class="request-option" onclick="selectRequest(this, 'Pharmacovigilance')">Pharmacovigilance</div>
-      <div class="request-option" onclick="selectRequest(this, 'Others')">Others</div>
-    </div>
-    <input type="hidden" name="request" id="request" />
-
     <label for="message">Message</label>
     <textarea id="message" name="message" rows="4"></textarea>
 
@@ -200,13 +191,7 @@
   </form>
   </div>
 </div>
-<script>
-  function selectRequest(element, value) {
-    document.querySelectorAll('.request-option').forEach(option => option.classList.remove('selected'));
-    element.classList.add('selected');
-    document.getElementById('request').value = value;
-  }
-</script>
+
   <div id="footer">
     <div class="footer-content">
         <div class="footer-logo">

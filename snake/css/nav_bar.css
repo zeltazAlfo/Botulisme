@@ -1,0 +1,101 @@
+
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    border-bottom: 2px solid #e0f5e8;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2F89FC;
+  }
+  
+  .logo img {
+    width:120px;
+    height: 40px;
+    margin-right: 8px;
+  }
+  
+  .green {
+    color: #5FD068;
+  }
+  
+  .nav-links {
+    position: relative; /* ou 'fixed' si tu veux qu'elle reste visible en scrollant */
+    z-index: 9999;
+
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2F89FC;
+    
+  }
+  
+  .nav-links a.active {
+    color: #5FD068;
+    font-weight: bold;
+  }
+  
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18px;
+    height: 14px;
+    cursor: pointer;
+  }
+  
+  .burger span {
+    height: 2px;
+    background: #ccc;
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+/* Cacher le menu burger sur les grands écrans */
+.burger {
+  display: none;
+}
+
+/* Menu déroulant caché par défaut */
+.nav-links {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+  margin-right: 5%;
+  
+}
+
+@media (max-width: 940px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px; /* ajuster selon la taille de ta navbar */
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}

@@ -1,0 +1,192 @@
+
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  
+  }
+  
+
+  .container{
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    
+    
+  }
+  .title {
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #2F88FB;
+    border-bottom: 1px solid #2F88FB;
+    padding-bottom: 6px; /* espace entre le texte et la ligne */
+    margin-bottom: 2%;
+  }
+  
+
+  
+  #target{
+    width: 30%;
+    
+    border-radius: 7px;
+    border: 1px solid #2F88FB;
+  }
+  
+  .first-child{
+    width: 90%;
+  }
+  
+  .first-child .subcontainer {
+    display: flex;
+    flex-direction: row;
+    gap:2%;
+    
+  
+  }
+  
+  .first-child .text{
+  
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    color: #3A3939;
+    width: 100%;
+    
+  }
+  .second-child {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .second-child .subcontainer {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Espace entre les cadres */
+    width: 90%;
+  }
+  
+  .second-child .subcontainer .cadre {
+    width: 90%; /* Vous pouvez ajuster cette valeur si nécessaire */
+    background: linear-gradient(to bottom right, #5FD068, #03A14D);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 5%; /* Espace entre l'image et le texte */
+    padding: 10px; /* Ajoute un padding à l'intérieur du cadre */
+  }
+  
+  .second-child .subcontainer img {
+    width: 120px; /* Ajustez la largeur selon vos besoins */
+    height: 80%; /* Définir une hauteur fixe pour éviter l'allongement */
+    object-fit: cover; /* Maintient le ratio d'aspect sans déformation */
+    padding: 10px; /* Ajoute un padding autour de l'image */
+    border-radius: 10px; /* Arrondit les coins de l'image si nécessaire */
+    
+  }
+  .second-child .subcontainer .cadre .text{
+    text-align: left;
+    color: white;
+  }
+  
+  .second-child .subcontainer .cadre .subtitle{
+    font-weight: 600;
+  }
+  
+  
+  .second-child .subcontainer .cadre .place{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-style: italic;
+    font-size: small;
+  }
+  .second-child .subcontainer .cadre .view{
+    font-weight: 300;
+    font-size: 13px;
+  
+  }
+  
+  @media screen and (max-width: 1000px) {
+  
+    .first-child .subcontainer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .second-child .subcontainer {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .second-child .subcontainer .cadre {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .second-child .subcontainer .cadre .text {
+      text-align: center;
+    }
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+  
+    .title {
+      font-size: x-large;
+    }
+    
+    .subtitle {
+      font-size: large;
+    }
+  
+    
+    #target{
+      width: 100%;
+    }
+    
+    .first-child ul{
+      margin-left: 5%;
+    }
+  
+    .second-child .subcontainer .cadre img {
+      width: 80%;
+      height: auto;
+    }
+  
+    
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: large;
+    }
+  
+    .subtitle {
+      font-size: medium;
+    }
+  
+  
+    .second-child .subcontainer .cadre {
+      padding: 10px 5px;
+    }
+  
+    .second-child .subcontainer .cadre .view {
+      font-size: 12px;
+    }
+  
+    .six-child img {
+      width: 95%;
+    }
+  
+    
+    
+  }
+  

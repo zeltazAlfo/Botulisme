@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioDrug</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+
+  <link rel="stylesheet" href="css/font.css"/>
+  <link rel="stylesheet" href="css/bite.css" />
+  <link rel="stylesheet" href="css/nav_bar.css" />
+  <link rel="stylesheet" href="css/contact_form.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logoplus.jpeg" alt="logo biodrug" />
+    </div>
+
+    <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="disease.html">Disease</a>
+        <a href="epidemiology.html">Epidemiology</a>
+        <a href="treatment.html">Treatment</a>
+        <a href="news.html">Articles & News</a>
+        <a href="product.html">Product</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+    <div class="main">
+        <div class="first-child">
+            <div class="title">What to do in case of bite ?</div>
+            <div class="text">
+                <p>Moderate or severe symptoms occur in 20-30% of these patients.</p>
+                <p>Sometimes the snake may not inject any venom, in which case no symptoms will arise.(2)</p>
+                <div class="subtitle">What are the symptoms after Viper bite ?</div>
+                <p>Viper bites often result in severe local pain, progressive swelling and a bluish discoloration.
+                    In severe cases early symptoms might also include dizziness, nausea, vomiting, diarrhoea, abdominal pain, breathing difficulties, hypotension, cardiac disturbances and reduced level of consciousness. (2)</p>
+                <div class="subtitle">What to do in case of Viper bite ? (2,3)</div>
+                <ul>
+                    <li>Keep the person calm and at rest with the bitten body part still.</li>
+                    <li>Call the Poison Centre, Emergency center or a physician for advice.</li>
+                    <li>Everyone with an adder bite should obtain medical attention at an emergency room.</li>
+                    <li>Anyone who becomes lethargic, has vomited or has trouble breathing should seek medical attention immediately.</li>
+                </ul>
+                <div class="subtitle">When to use the Viper serum ? (4) (5)</div>
+                <img src="img/3.png" alt="symptoms table">
+            </div>
+        </div>
+
+    </div>
+
+  <div id="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <div class="footer_title">Botulism Serum</div>
+            <p class="web_ref">© 2023 Botulism-serum.com</p>
+            <p>This website is operated by Medyser, and is intended for visitors from EU countries.</p>
+        </div>
+        
+        <a href="product.html">Our solutions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="contact.html">Contact</a>
+        
+    </div>
+  </div>
+</body>
+</html>

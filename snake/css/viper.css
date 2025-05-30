@@ -1,0 +1,144 @@
+.main {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.container{
+text-align: center;
+align-items: center;
+margin-top: 5%;
+
+
+}
+.title {
+display: inline-block;
+font-size: xx-large;
+font-weight: 700;
+color: #2F88FB;
+border-bottom: 1px solid #2F88FB;
+padding-bottom: 6px; /* espace entre le texte et la ligne */
+margin-bottom: 2%;
+}
+
+.first-child{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.first-child .subcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2%
+}
+
+
+.first-child .picture-2{
+    width: 25%;
+    height: fit-content;
+}
+
+
+.first-child .text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    color: #3A3939;
+    
+    }
+.first-child .text .first-text {
+    display: inline-block;
+}
+
+.first-child .text .strong{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3A3939;
+
+}
+
+.first-child .text .subtitle{
+    font-size: 14px;
+    font-weight: 500;
+    color: #3A3939;
+    margin-bottom: 1%;
+}
+.first-child .text a {
+    text-decoration: none;
+    display: unset;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3A3939;
+}
+
+
+.first-child .text img {
+    width: 45%;
+    margin-top: 15%;
+    margin-left: 5%;
+    border-radius: 7px;
+    border: 1px solid #2F88FB;
+    
+    }
+
+.second-child {
+display: flex;
+flex-direction: column;
+width: 100%}
+
+.second-child .subcontainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.second-child img {
+    width: 30%;
+    border-radius: 5px;
+    border: 2px solid #2F88FB;
+    
+}
+
+.second-child .subtitle {
+    color: #5FD068;
+    font-size: x-large;
+    font-weight: 700;
+    margin: 2%;
+    width: 100%;
+}
+@media screen and (max-width: 500px) {
+
+.first-child .text{
+    align-items: center;
+    justify-items: center;
+}
+
+.first-child .subcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+    justify-items: center;
+    
+}
+.first-child img {
+    width: 80% !important;
+}
+.title {
+    display: inline-block;
+    font-size: x-large;
+}
+.second-child img{
+    width: 80%;
+}
+}

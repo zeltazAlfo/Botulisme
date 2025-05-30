@@ -61,8 +61,8 @@ body {
 .first-child img {
     width: 35%;
     height: auto;
-    border-radius: 7px;
-    border: 1px solid #2F88FB;
+   
+    border: 0px;
 }
 
 .first-child .text {
@@ -139,6 +139,11 @@ body {
     margin-block-start: 0em;
 }
 
+.italic{ 
+    margin-block-start: 0em;
+    font-style:  italic;
+}
+
 .third-child .text {
     text-align: left;
     font-size: medium;
@@ -184,8 +189,8 @@ body {
     width: 35%;
     height: auto;
     border-radius: 7px;
-    border: 1px solid #2F88FB;
-    margin-top: 3%;
+    border: 0px;
+    
     margin-bottom: 3%;
 }
 
