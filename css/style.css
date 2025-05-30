@@ -56,13 +56,13 @@
 }
 
 #biodrug {
-  width: 300px;
-  height: 100px;
+  width: 30%;
+ 
 }
 
 #biomed{
-  width: 220px;
-  height: 145px;
+  width: 30%;
+  
 }
 
 #target{
@@ -166,29 +166,30 @@
 }
 
 
-.cell {
+.fourth-child .cell {
   padding: 20px;
   box-sizing: border-box;
+  font-size: 14px;
 }
 
-.img-box {
+.fourth-child .img-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.img-box img {
+.fourth-child .img-box img {
   width: 100px;
   height: auto;
 }
-.subcontainer .biodrug.img-box img {
+.fourth-child .subcontainer .biodrug.img-box img {
   width: 150px; /* ou une taille plus grande selon ton besoin */
   height: auto;
 }
 
 
 
-.part1 {
+.fourth-child .part1 {
   background: linear-gradient(to bottom right, #2F88FB, #034599);
   color: white;
   padding: 20px;
@@ -198,26 +199,27 @@
   text-align: left;
 }
 
-.part2 {
+.fourth-child .part2 {
   background: linear-gradient(to bottom right, #2F88FB, #034599);
   color: white;
   padding: 20px;
   border-radius: 20px;
+  font-size: 14px;
   text-align: left;
 }
 
-.part2 .part-title {
+.fourth-child .part2 .part-title {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.part2 ul {
+.fourth-child .part2 ul {
   padding-left: 20px;
   margin: 10px 0;
 }
 
-.part2 li {
+.fourth-child .part2 li {
   margin-bottom: 8px;
   line-height: 1.5;
 }
@@ -261,11 +263,31 @@
 
 .six-child .subcontainer {
   display: flex;
+  flex-direction: column;
   justify-content: center; /* centre les images dans le conteneur */
   align-items: center;
   gap: 10%; /* espace entre les images */
-  flex-wrap: wrap; /* permet d’être responsive si besoin */
+   /* permet d’être responsive si besoin */
 }
+
+.six-child .part{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centre les images dans le conteneur */
+  align-items: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.six-child .part .subtitle{
+  display: inline-block;
+    font-size: 50px;
+    font-weight: 700;
+    color: #2F88FB;
+    margin: 2%;
+    
+    max-width: 100%; 
+}
+
 
 .six-child img {
   margin: 2%;
